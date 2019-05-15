@@ -18,7 +18,6 @@ public class ConfigBean //boot -->spring   applicationContext.xml --- @Configura
 		return new RestTemplate();
 	}
 
-
 	@Bean
 	public IRule myRule()
 	{
