@@ -19,9 +19,10 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
-    public Dept get(Long id)
-    {
-        return deptDao.findById(id);
+    public Dept get(Long id) {
+        Dept dept=deptDao.findById(id);
+        System.out.println(dept);
+        return dept;
     }
 
     @Override
