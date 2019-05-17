@@ -4,6 +4,7 @@ server:
 feign:
   hystrix:
     enabled: true
+
 eureka:
   client:
     register-with-eureka: false

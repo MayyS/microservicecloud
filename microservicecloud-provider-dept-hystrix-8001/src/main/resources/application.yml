@@ -1,0 +1,37 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: provider-dept-hystrix
+  datasource:
+    url: jdbc:mysql://localhost:3306/practice?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: root
+    driver-class-name: org.gjt.mm.mysql.Driver
+    dbcp2:
+      max-wait-millis: 200
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: edu.sw.springcloud.entity
+  configuration:
+    cache-enabled: true
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: proider-8002
+    prefer-ip-address: true
+
+
+info:
+  app.name: mircoservicecloud-provider-dept-hystrix-8001
+  comany.name: edu.sw.springcloud
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

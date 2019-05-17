@@ -10,24 +10,25 @@ import java.util.List;
 
 @Service
 public class DeptServiceImpl implements DeptService {
-
     @Autowired
-    private DeptDao deptDao;
+    private DeptDao dao;
+
     @Override
-    public boolean add(Dept dept) {
-        return deptDao.addDept(dept);
+    public boolean add(Dept dept)
+    {
+        return dao.addDept(dept);
     }
 
     @Override
-    public Dept get(Long id) {
-        Dept dept=deptDao.findById(id);
-        System.out.println(dept);
-        return dept;
+    public Dept get(Long id)
+    {
+        return dao.findById(id);
     }
 
     @Override
     public List<Dept> list()
     {
-        return deptDao.findAll();
+        return dao.findAll();
     }
+
 }

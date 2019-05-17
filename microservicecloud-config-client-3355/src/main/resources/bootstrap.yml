@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      profile: test
+      name: microservicecloud-config-client
+      label: master
+      uri: http://localhost:3344
