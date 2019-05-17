@@ -18,6 +18,14 @@
         <module name="microservicecloud-provider-dept-8002" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="microservicecloud-config-3344" target="1.8" />
+      <module name="microservicecloud-config-client-3355" target="1.8" />
+      <module name="microservicecloud-config-dept-client-8001" target="1.8" />
+      <module name="microservicecloud-config-eureka-client-7001" target="1.8" />
+      <module name="microservicecloud-consumer-hystrix-dashboard" target="1.8" />
+      <module name="microservicecloud-provider-dept-hystrix-8001" target="1.8" />
+      <module name="microservicecloud-zuul-gateway-9527" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
