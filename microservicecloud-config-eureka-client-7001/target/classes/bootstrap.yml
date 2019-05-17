@@ -1,7 +1,0 @@
-spring:
-  cloud:
-    config:
-      uri: http://localhost:3344
-      profile: test
-      label: master
-      name: microservicecloud-config-eureka-client
